@@ -1,0 +1,16 @@
+<div style="padding-left: 20px;">
+    <p>This sample demonstrates CRUD operations in Grid. </p>
+
+    <div class="control-section">
+        <ejs-grid [dataSource]='data' allowPaging='true' allowFiltering='true' [filterSettings]='filterSettings' [pageSettings]='pageSettings' [editSettings]='editSettings' [toolbar]='toolbar' allowSorting='true' [sortSettings]='initialSort'>
+            <e-columns>
+                <e-column field='fullName' headerText='Name' isPrimaryKey='true' width='120' [validationRules]='namerules'></e-column>
+                <e-column field='score' headerText='Score' width='120' format='N' editType='numericedit' [edit]='numericParams' [validationRules]='scorerules'></e-column>
+                <e-column field='birthDay' headerText='BirthDay' type="date" [format]="formatOptions" width='130' editType='datepickeredit' [validationRules]='birthdayrules'></e-column>
+                <e-column field='ideality' headerText='Ideality' width='150'></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</div>
+
+<!--(actionComplete)="actionComplete($event)"-->
